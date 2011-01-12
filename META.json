@@ -1,0 +1,50 @@
+{
+   "abstract" : "Yet Another Catalyst::Plugin::ConfigLoader-style layer over Config::Any",
+   "author" : [
+      "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>",
+      "Robert Krimen <robertkrimen@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Config-ZOMG",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Clone" : 0,
+            "Config::Any" : 0,
+            "Hash::Merge::Simple" : 0,
+            "List::Util" : 0,
+            "Moo" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Deep" : 0,
+            "Test::More" : 0,
+            "Test::Warn" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/frioux/Config-ZOMG.git",
+         "web" : "http://github.com/frioux/Config-ZOMG"
+      }
+   },
+   "version" : "0.001000"
+}
+
