@@ -3,7 +3,7 @@ NAME
     over Config::Any
 
 VERSION
-    version 0.001000
+    version 0.002000
 
 DESCRIPTION
     "Config::ZOMG" is a fork of Config::JFDI. It removes a couple of unusual
@@ -135,6 +135,13 @@ METHODS
 
     If the list is empty then no files were loaded/read
 
+  find
+      $config->find
+
+    Returns a list of files that configuration will be loaded from. Use this
+    method to check whether configuration files have changed, without
+    actually reloading.
+
   clone
      $config->clone
 
@@ -168,7 +175,7 @@ AUTHORS
     *   Robert Krimen <robertkrimen@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2011 by Arthur Axel "fREW" Schmidt.
+    This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

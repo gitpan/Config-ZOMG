@@ -1,6 +1,6 @@
 package Config::ZOMG;
-BEGIN {
-  $Config::ZOMG::VERSION = '0.001000';
+{
+  $Config::ZOMG::VERSION = '0.002000';
 }
 
 # ABSTRACT: Yet Another Catalyst::Plugin::ConfigLoader-style layer over Config::Any
@@ -19,7 +19,7 @@ has package => (
 
 has source => (
    is => 'rw',
-   handles => [qw/ driver local_suffix no_env env_lookup path found /],
+   handles => [qw/ driver local_suffix no_env env_lookup path found find /],
 );
 
 has load_once => (
@@ -138,9 +138,8 @@ sub _load {
 
 1;
 
-
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -149,7 +148,7 @@ Config::ZOMG - Yet Another Catalyst::Plugin::ConfigLoader-style layer over Confi
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 DESCRIPTION
 
@@ -298,6 +297,13 @@ Returns a list of files found
 
 If the list is empty then no files were loaded/read
 
+=head2 find
+
+  $config->find
+
+Returns a list of files that configuration will be loaded from. Use this method
+to check whether configuration files have changed, without actually reloading.
+
 =head2 clone
 
  $config->clone
@@ -344,10 +350,9 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -1,6 +1,6 @@
 package Config::ZOMG::Source::Loader;
-BEGIN {
-  $Config::ZOMG::Source::Loader::VERSION = '0.001000';
+{
+  $Config::ZOMG::Source::Loader::VERSION = '0.002000';
 }
 
 use Moo;
@@ -113,6 +113,11 @@ sub found {
     return @{ $self->_found };
 }
 
+sub find {
+    my $self = shift;
+    return grep { -f $_ } $self->_find_files;
+}
+
 sub _load_files {
     my $self = shift;
     my $files = shift;
@@ -215,6 +220,7 @@ sub _get_path {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -223,7 +229,7 @@ Config::ZOMG::Source::Loader
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 AUTHORS
 
@@ -241,10 +247,9 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -5,7 +5,7 @@
       "Robert Krimen <robertkrimen@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -17,34 +17,42 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::Pod" : "1.41"
          }
       },
       "runtime" : {
          "requires" : {
-            "Clone" : 0,
-            "Config::Any" : 0,
-            "Hash::Merge::Simple" : 0,
-            "List::Util" : 0,
-            "Moo" : 0
+            "Clone" : "0",
+            "Config::Any" : "0",
+            "Hash::Merge::Simple" : "0",
+            "List::Util" : "0",
+            "Moo" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Test::Deep" : 0,
-            "Test::More" : 0,
-            "Test::Warn" : 0
+            "Test::Deep" : "0",
+            "Test::More" : "0",
+            "Test::Warn" : "0"
          }
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/frioux/Config-ZOMG/issues"
+      },
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/frioux/Config-ZOMG.git",
-         "web" : "http://github.com/frioux/Config-ZOMG"
+         "web" : "https://github.com/frioux/Config-ZOMG"
       }
    },
-   "version" : "0.001000"
+   "version" : "0.002000"
 }
 
