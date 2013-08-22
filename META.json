@@ -5,7 +5,7 @@
       "Robert Krimen <robertkrimen@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -53,6 +53,6 @@
          "web" : "https://github.com/frioux/Config-ZOMG"
       }
    },
-   "version" : "0.002000"
+   "version" : "1.000000"
 }
 

@@ -1,6 +1,6 @@
 package Config::ZOMG;
 {
-  $Config::ZOMG::VERSION = '0.002000';
+  $Config::ZOMG::VERSION = '1.000000';
 }
 
 # ABSTRACT: Yet Another Catalyst::Plugin::ConfigLoader-style layer over Config::Any
@@ -98,8 +98,9 @@ sub open {
     }
     my $self = shift;
     warn "You called ->open on an instantiated object with arguments" if @_;
+    my $config_hash = $self->load;
     return unless $self->found;
-    return wantarray ? ($self->load, $self) : $self->load;
+    return wantarray ? ($config_hash, $self) : $config_hash;
 }
 
 sub load {
@@ -148,7 +149,7 @@ Config::ZOMG - Yet Another Catalyst::Plugin::ConfigLoader-style layer over Confi
 
 =head1 VERSION
 
-version 0.002000
+version 1.000000
 
 =head1 DESCRIPTION
 

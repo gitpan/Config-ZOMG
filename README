@@ -3,7 +3,7 @@ NAME
     over Config::Any
 
 VERSION
-    version 0.002000
+    version 1.000000
 
 DESCRIPTION
     "Config::ZOMG" is a fork of Config::JFDI. It removes a couple of unusual

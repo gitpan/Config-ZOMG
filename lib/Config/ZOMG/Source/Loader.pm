@@ -1,6 +1,6 @@
 package Config::ZOMG::Source::Loader;
 {
-  $Config::ZOMG::Source::Loader::VERSION = '0.002000';
+  $Config::ZOMG::Source::Loader::VERSION = '1.000000';
 }
 
 use Moo;
@@ -108,9 +108,7 @@ sub read {
 
 sub found {
     my $self = shift;
-    $self->read unless $self->_found;
-
-    return @{ $self->_found };
+    return ( $self->_found ? @{ $self->_found } : () );
 }
 
 sub find {
@@ -229,7 +227,7 @@ Config::ZOMG::Source::Loader
 
 =head1 VERSION
 
-version 0.002000
+version 1.000000
 
 =head1 AUTHORS
 
